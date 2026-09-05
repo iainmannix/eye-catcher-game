@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#090709" />
+    <meta name="description" content="A customizable open-source canvas catching game." />
+    <title>Eye Catcher</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="site-header">
+        <p>OPEN-SOURCE CANVAS GAME</p>
+        <h1>EYE CATCHER</h1>
+        <a href="https://github.com/iainmannix/eye-catcher-game">VIEW SOURCE</a>
+      </header>
+
+      <section class="game-shell" aria-label="Eye Catcher game">
+        <div class="game-field" id="game-field">
+          <div class="sky-cycle" aria-hidden="true">
+            <span class="sky sky-1"></span>
+            <span class="sky sky-2"></span>
+            <span class="sky sky-3"></span>
+            <span class="sky sky-4"></span>
+            <span class="sky sky-5"></span>
+          </div>
+
+          <canvas id="game-canvas" tabindex="0" aria-label="Game area. Move with arrow keys, A and D, or drag across the game."></canvas>
+
+          <div class="stopwatch" id="stopwatch" aria-hidden="true">00:00.0</div>
+          <div class="hud" id="hud" aria-hidden="true">
+            <span class="lives" id="lives"></span>
+            <button class="text-button" id="pause-button" type="button">PAUSE</button>
+            <span class="score" id="score">0000</span>
+          </div>
+
+          <section class="overlay start-overlay" id="start-overlay">
+            <div class="eye-rain" aria-hidden="true"><i></i><i></i><i></i></div>
+            <img class="title-art" src="./assets/eye-catcher-title.webp" alt="Eye Catcher" />
+            <img class="splash-art" src="./assets/eye-catcher-splash.webp" alt="" />
+            <div class="actions">
+              <button id="start-button" type="button" disabled>LOADING…</button>
+              <button id="controls-button" type="button">CONTROLS</button>
+            </div>
+            <small>ARTWORK BY SPIDERS.N.CIDERS</small>
+          </section>
+
+          <section class="overlay controls-overlay hidden" id="controls-overlay" role="dialog" aria-modal="true" aria-labelledby="controls-title">
+            <h2 id="controls-title">CONTROLS</h2>
+            <dl>
+              <div><dt>KEYBOARD</dt><dd>Move with ← → or A / D. Pause with Space or P.</dd></div>
+              <div><dt>TOUCH / MOUSE</dt><dd>Drag or tap inside the game field.</dd></div>
+              <div><dt>OBJECTIVE</dt><dd>Catch eyes, avoid glitches and broken hearts, and reach the target score.</dd></div>
+            </dl>
+            <button id="close-controls-button" type="button">BACK</button>
+          </section>
+
+          <section class="overlay pause-overlay hidden" id="pause-overlay" role="dialog" aria-modal="true" aria-label="Game paused">
+            <h2>PAUSED</h2>
+            <div class="actions">
+              <button id="resume-button" type="button">RESUME</button>
+              <button id="restart-from-pause-button" type="button">RESTART</button>
+            </div>
+          </section>
+
+          <section class="overlay result-overlay hidden" id="game-over-overlay" role="dialog" aria-modal="true" aria-label="Game over">
+            <h2>GAME OVER</h2>
+            <img class="result-art" src="./assets/eye-catcher-splash.webp" alt="" />
+            <p id="game-over-score">SCORE 0000</p>
+            <button id="play-again-button" type="button">PLAY AGAIN</button>
+          </section>
+
+          <section class="overlay result-overlay hidden" id="complete-overlay" role="dialog" aria-modal="true" aria-label="Run complete">
+            <h2>RUN COMPLETE</h2>
+            <img class="result-art" src="./assets/eye-catcher-run-complete.webp" alt="" />
+            <div class="run-results">
+              <span><small>SCORE</small><strong id="complete-score">0000</strong></span>
+              <span><small>TIME</small><strong id="complete-time">00:00.0</strong></span>
+              <span><small>BEST</small><strong id="best-time">00:00.0</strong></span>
+            </div>
+            <p class="new-best hidden" id="new-best">NEW BEST TIME</p>
+            <button id="play-again-complete-button" type="button">PLAY AGAIN</button>
+          </section>
+        </div>
+      </section>
+
+      <aside class="customize-note">
+        <strong>MAKE IT YOURS</strong>
+        <p>Fork this repository, replace the files in <code>/assets</code> with your own artwork, then publish your version.</p>
+      </aside>
+    </main>
+
+    <script type="module" src="./game.js"></script>
+  </body>
+</html>
