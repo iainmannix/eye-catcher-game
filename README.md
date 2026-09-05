@@ -1,6 +1,6 @@
 # EYE CATCHER
 
-Eye Catcher is a customizable browser game built with plain HTML, CSS, JavaScript, and the Canvas API. Catch the collectible eyes, avoid the glitches, and reach the target score as quickly as possible.
+Eye Catcher is a customizable browser game built with plain HTML, CSS, JavaScript, and Canvas API. Catch the collectible eyes, avoid the glitches, and reach the target score as quickly as possible.
 
 <br>Play it: **[Eye Catcher on GitHub Pages](https://iainmannix.github.io/eye-catcher-game/)**
 
@@ -9,27 +9,27 @@ Eye Catcher is a customizable browser game built with plain HTML, CSS, JavaScrip
 <img src="./assets/repository-preview.webp" alt="Eye Catcher game artwork" width="420" />
 
 > [!IMPORTANT]
-> The included artwork is by **Spiders.n.ciders** and is not open source. It is present only in the original playable demonstration. Replace every file in [`assets/`](./assets) with your own artwork before redistributing, remixing, or publishing a customized version unless you have separate permission from the artist.
+> The included artwork is by **Spiders.n.ciders** and is not open source. It is present only in the original playable demo. Replace every file in [`assets/`](./assets) with your own art before redistributing, remixing, or publishing unless you have separate permission from the artist.
 
 ## In this repository
 
 - A complete playable browser game with keyboard, mouse, and touch controls
 - A single [`config.js`](./config.js) file for gameplay settings and artwork paths
-- A clearly documented [`assets/`](./assets) folder for drop-in artwork replacement
+- A clearly documented [`assets/`](./assets) folder for replacing artwork
 - Automatic GitHub Pages deployment
 - No framework, package installation, or build step
 
 ## Make your own version
 
-1. Select **Fork** at the top of this repository to create your own copy.
-2. Replace every artwork file in [`assets/`](./assets) with your own artwork, keeping the existing filenames and file formats.
-3. If you prefer different filenames, update their paths in [`config.js`](./config.js).
-4. Adjust scoring, lives, spawn chances, and the target score in [`config.js`](./config.js).
-5. Enable GitHub Pages with **GitHub Actions** as the source in your repository settings.
+1. Select **Fork** at the top of this repository
+2. Replace every file in [`assets/`](./assets) with your own art but keep the existing filenames and file formats
+3. If you prefer different filenames, update their paths in [`config.js`](./config.js)
+4. Adjust scoring, lives, spawn points, and the target score in [`config.js`](./config.js)
+5. Enable GitHub Pages with **GitHub Actions** as the source in your repository settings
 
 Every push to your `main` branch will update your playable GitHub Pages version automatically.
 
-Your artwork should use transparent backgrounds for sprites. Similar dimensions are helpful but not required because the game scales each asset automatically.
+Your assets should use transparent backgrounds for sprites. Similar dimensions are helpful but not required because the game scales each asset automatically.
 
 | File | Purpose |
 | --- | --- |
@@ -47,13 +47,13 @@ Your artwork should use transparent backgrounds for sprites. Similar dimensions 
 
 ## Preview while you work
 
-Because the game uses JavaScript modules, serve the folder with any static server rather than opening `index.html` directly. For example:
+Because the game uses JavaScript modules you can serve the folder with any static server rather than opening `index.html` directly. For example:
 
 ```sh
 python3 -m http.server 8080
 ```
 
-Then open `http://localhost:8080`. Refresh the browser after replacing artwork or changing the game.
+Then open `http://localhost:8080` and refresh the browser after updates. 
 
 ## Controls
 
@@ -65,8 +65,8 @@ Then open `http://localhost:8080`. Refresh the browser after replacing artwork o
 
 The source code is available under the [MIT License](./LICENSE).
 
-The included visual artwork is by **Spiders.n.ciders**, is provided only for this playable demonstration, and is **not** licensed under MIT. It must be replaced before redistributing, remixing, or publishing your own version unless you have obtained separate permission from the artist. See [`assets/README.md`](./assets/README.md).
+The included visual artwork is by **Spiders.n.ciders**, is provided only for this playable demo, and is **not** licensed under MIT. It must be replaced before redistributing, remixing, or publishing your own version unless you have obtained separate permission from the artist. See [`assets/README.md`](./assets/README.md).
 
 ## Contributing
 
-Bug fixes, accessibility improvements, documentation updates, and gameplay enhancements are welcome. Contributions must not add third-party artwork without clear redistribution permission.
+Bug fixes, accessibility improvements, documentation updates, and gameplay enhancements are welcome. Contributions can't contain new artwork without clear redistribution permission.
