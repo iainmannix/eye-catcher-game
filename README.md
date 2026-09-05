@@ -9,7 +9,7 @@ Eye Catcher is a customizable browser game built with plain HTML, CSS, JavaScrip
 <img src="./assets/repository-preview.webp" alt="Eye Catcher game artwork" width="420" />
 
 > [!IMPORTANT]
-> The included artwork is by **Spiders.n.ciders** and is not open source. It is present only in the original playable demo. Replace every file in [`assets/`](./assets) with your own art before redistributing, remixing, or publishing unless you have separate permission from the artist.
+> The included artwork is by **Spiders.n.ciders** and is not open source. Replace every file in [`assets/`](./assets) with your own art before redistributing, remixing, or publishing unless you have separate permission from the artist.
 
 ## In this repository
 
