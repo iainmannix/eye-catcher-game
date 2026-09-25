@@ -68,7 +68,7 @@ button { cursor: pointer; }
 .run-results strong { font-size: 1rem; letter-spacing: .08em; }
 .new-best { font-size: .62rem; }
 .eye-rain { position: absolute; inset: 0; pointer-events: none; }
-.eye-rain i { position: absolute; top: -18%; left: 15%; width: 36px; aspect-ratio: 1; background: url("./assets/eye-collectible.webp") center / contain no-repeat; animation: eye-drop 18s ease-in-out infinite; }
+.eye-rain i { position: absolute; top: -18%; left: 15%; width: 36px; aspect-ratio: 1; background: url("./assets/eye-collectible.webp") center / contain no-repeat; animation: eye-drop 18s linear infinite; }
 .eye-rain i:nth-child(2) { left: 48%; width: 42px; animation-delay: -6s; }
 .eye-rain i:nth-child(3) { right: 14%; left: auto; width: 32px; animation-delay: -12s; }
 
@@ -81,7 +81,12 @@ button { cursor: pointer; }
 .game-field.heart-hit { animation: heart-hit .3s ease-out; }
 @keyframes pulse { 50% { opacity: .72; } }
 @keyframes bob { 0%, 100% { transform: translateY(3px) rotate(-1deg); } 50% { transform: translateY(-7px) rotate(1deg); } }
-@keyframes eye-drop { 0%, 58%, 100% { top: -18%; opacity: 0; transform: rotate(-18deg); } 5%, 48% { opacity: .9; } 40%, 54% { top: 74%; opacity: .85; transform: rotate(350deg); } }
+@keyframes eye-drop {
+  0% { top: -18%; opacity: 0; transform: rotate(-18deg); }
+  5% { opacity: .9; }
+  92% { opacity: .9; }
+  100% { top: 118%; opacity: 0; transform: rotate(342deg); }
+}
 @keyframes glitch-hit { 35% { transform: translateX(-2px); } 70% { transform: translateX(2px); } }
 @keyframes heart-hit { 30% { transform: translateX(-4px) scale(.995); } 60% { transform: translateX(4px) scale(1.005); } }
 
